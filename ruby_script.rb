@@ -29,5 +29,43 @@ $people_currently_in_class = 27 # Global variable
 "monkey" == 'monkey'
 "monkey" === 'monkey'
 
-"I said, \"Hello\"!" # \ <- escape character
+"I said, \"Hello\"!" # \ <- escape character (Tells ruby to
+# ignore next character)
 'I said, "Hello"!' == "I said, \"Hello\"!"
+
+"Hello"[0]      # => 'H'
+"Hello"[-1]     # => 'o' back around to the end.
+"Hello"[0..2]   # => 'HEL'
+"Hello"[-5..-1] # => 'Hello'
+
+long_string = "I don't know. I just don't understand. I don't get it"
+long_string.gsub("don't", "do") #find and replace all.
+
+other_string = "I didn't believe. I didn't understand."
+other_string.sub("didn't", "did") #find and replace first.
+
+buffoonery = "bluster and blow"
+buffoonery.upcase
+
+# Note: some_strign.upcase is not actually changing 'buffoonery', it copies
+# it and then makes it avaible in that instance. Then forgets it.
+
+# So, you need to: some_string = some_string.upcase or, some_string.upcase!
+# a method with the '!' WILL change the original!!!!!!
+# This is called 'Mutation' because it mutates the string permanently.
+
+#--- String Concatenate
+full_name = "John" + " " + "Doe"
+
+# or,
+first_name = "John"
+last_name = "Doe"
+
+full_name = first_name + " " + last_name
+
+# or,
+full_name = "#{first_name} #{last_name}" # this requires double-quotes ""
+# Note: in the #{} you're just running ruby code.
+
+"2+2 = something"     # =>  2+2 = something
+"#{2+2} = something"  # =>    4 = something
