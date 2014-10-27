@@ -23,23 +23,47 @@
 # end
 
 #DO IT WITH RANGES
+# def ageist age
+#   if age <= 1
+#     status = "baby"
+#   elsif (1..10) === age
+#     status = "child"
+#   elsif (11..12) === age
+#     status = "tween"
+#   elsif (13..19) === age
+#     status = "teenger"
+#   elsif (20..40) === age
+#     status = "adult"
+#   elsif (41..65) === age
+#     status = "middle-age"
+#   elsif (66..100) === age
+#     status = "senior"
+#   elsif age >100
+#     status = "old as .."
+#   end
+#
+#   return status
+# end
+
+#DO IT WITH CASE
 def ageist age
-  if age <= 1
-    status = "baby"
-  elsif (1..10) === age
-    status = "child"
-  elsif (11..12) === age
-    status = "tween"
-  elsif (13..19) === age
-    status = "teenger"
-  elsif (20..40) === age
-    status = "adult"
-  elsif (41..65) === age
-    status = "middle-age"
-  elsif (66..100) === age
-    status = "senior"
-  elsif age >100
-    status = "old as .."
+  case age
+    when (0..1)
+      status = "baby"
+    when (1..10)
+      status = "child"
+    when (11..12)
+      status = "tween"
+    when (13..19)
+      status = "teenger"
+    when (20..40)
+      status = "adult"
+    when (41..65)
+      status = "middle-age"
+    when (66..100)
+      status = "senior"
+    when (101..110)
+      status = "old as .."
   end
 
   return status
