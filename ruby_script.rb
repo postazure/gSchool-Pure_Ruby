@@ -21,4 +21,13 @@ puts 4.between?(3, 80)
 # called on them. In Java, 4 is just a 4 (int)
 
 #-------- Variables -----------------------------------------
-people_currently_in_class = 27 # this is a local variable
+people_currently_in_class = 27 # Local variable
+@people_currently_in_class = 27 # Instance variable
+$people_currently_in_class = 27 # Global variable
+
+#--------- String -------------------------------------------
+"monkey" == 'monkey'
+"monkey" === 'monkey'
+
+"I said, \"Hello\"!" # \ <- escape character
+'I said, "Hello"!' == "I said, \"Hello\"!"
