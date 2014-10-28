@@ -69,3 +69,81 @@ full_name = "#{first_name} #{last_name}" # this requires double-quotes ""
 
 "2+2 = something"     # =>  2+2 = something
 "#{2+2} = something"  # =>    4 = something
+
+#-------------- Arrays ---------------------------------------
+
+# Arrays are ordered
+some_array = []     # New Array
+some_array.empty?   # => True
+
+some_array[0] = 'foo'
+some_array[1] = 'bar'
+some_array.empty?   # => False
+
+
+student_names = ["Jane", "Jeff", "Jan"]
+student_names[0]    # => 'Jane'
+student_names.at(0) # => 'Jane'
+student_names.count  #or .length, or .size
+
+
+student_names.push("Jimmy")
+# adds 'Jimmy' to end of array
+# student_names = ["Jane", "Jeff", "Jan", "Jimmy"]
+
+student_name.pop
+# Takes the last item off
+# Will accept an int, and will pop that many off
+# student_names = ["Adam", "Jane", "Jeff", "Jan"]
+
+student_names.unshift("Adam")
+# adds "Adam" to the beginning of array
+# student_names = ["Adam", "Jane", "Jeff", "Jan"]
+
+student_names.shift
+# Takes the first item off
+# Will accept an int, and will shift that many off
+# student_names = ["Jane", "Jeff", "Jan"]
+
+
+student_names.insert(2, "Kyle")
+# Places at an (INDEX, <something>) and moves everything else over
+# student_names = ["Jane", "Jeff", "Kyle", "Jan"]
+
+student_names.delete("Kyle") # or, .delete_at(INDEX)
+# Will accept an int, and will shift that many off
+# student_names = ["Jane", "Jeff", "Jan"]
+# Note: This returns Kyle
+
+student_names.delete_if {|name| name.start_with?("J") }
+# Deletes students that start with a "J"
+# student_names = []
+
+#--- Multi-dimentional array
+
+ary = [[1,2], [3,4]]
+
+ary[1][0] # => '3'
+#ary    [1]               [0]
+#array  First Ary Index   Inner Ary Index
+
+#--- Ranges
+
+(1..5).to_a   # => [1,2,3,4,5]
+(1...5).to_a  # => [1,2,3,4]      (#...#) range is exclusive
+
+(-5..-1).to_a # => [-5,-4,-3,-2,-1]
+
+#------------------------- Hashes
+
+this_hash = {
+  first_name: 'John',
+  last_name: 'Doe',
+  email: 'john@doe.com'
+}
+
+# this_hash = {:first_name=>"John", :last_name=>"Doe", :email=>"john@doe.com"}
+# Note: this convers 'email:' to a symbol ':email'.
+# SO, this_hash[:email] => 'john@doe.com'
+
+# This is the new way, the old way is a hash rocket '=>'

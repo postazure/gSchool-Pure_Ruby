@@ -3,10 +3,6 @@
   # Then I will see any character 'e' converted into a 3
   # And  I will see all the other letters capitalized
 
-
-
-
-# puts fox_str.upcase.gsub("E", "3")
 class String
   def leet
     leet_dict = {'E' => '3', 'A' => '4', 'S' => '$',
@@ -24,4 +20,7 @@ end
 
 fox_str = "The quick brown fox jumps over the lazy dog."
 
+
 puts fox_str.leet
+
+# puts fox_str.upcase.gsub("E", "3") #<- Easy way
