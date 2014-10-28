@@ -14,7 +14,7 @@ class_info = []
 
 class_str.each_line do |text|
 
-  working_ary = text.gsub(/\s+/m, ' ').strip.split(" ")
+  working_ary = text.gsub(/\s/, ' ').strip.split(" ")
 
   if working_ary.length > 4
     num_extra = (working_ary.length - 4)
